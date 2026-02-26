@@ -1,2 +1,123 @@
 # grade11-life-sciences
 Learn Grade 11 and 12 Life Sciences, solidify your knowledge. 
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 11 Life Sciences</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9;
+        }
+        header {
+            background-color: #2e8b57;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #1f5f3a;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #2e8b57;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #2e8b57;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #246b45;
+        }
+    </style>
+</head>
+<body><header>
+    <h1>Grade 11 Life Sciences</h1>
+    <p>CAPS Aligned Study Website</p><!-- MAIN WEBSITE HYPERLINK -->
+<p>
+    <a href="grade11_life_sciences_website.html" target="_blank" 
+       style="color: yellow; font-weight: bold; text-decoration: underline;">
+       Click Here to Open Full Website
+    </a>
+</p>
+
+</header><nav>
+    <a href="#biodiversity">Biodiversity</a>
+    <a href="#genetics">Genetics</a>
+    <a href="#humanimpact">Human Impact</a>
+    <a href="https://www.education.gov.za/Curriculum/CAPS.aspx" target="_blank">CAPS Curriculum</a>
+</nav><section id="biodiversity">
+    <h2>Biodiversity & Classification</h2>
+    <p>Biodiversity refers to the variety of life on Earth. It includes genetic diversity, species diversity, and ecosystem diversity.</p><!-- ADD IMAGE HERE -->
+<!-- Example: <img src="images/biodiversity.jpg" alt="Biodiversity"> -->
+
+<button onclick="showMore('bioMore')">Show More</button>
+<p id="bioMore" style="display:none;">
+    Classification organizes living organisms into groups based on shared characteristics. The five kingdoms include Monera, Protista, Fungi, Plantae, and Animalia.
+</p>
+
+</section><section id="genetics">
+    <h2>Genetics & Inheritance</h2>
+    <p>Genetics is the study of heredity and variation in organisms.</p><!-- ADD IMAGE HERE -->
+<!-- Example: <img src="images/dna.jpg" alt="DNA Structure"> -->
+
+<button onclick="showMore('genMore')">Show More</button>
+<p id="genMore" style="display:none;">
+    DNA carries genetic information. Gregor Mendel discovered the basic principles of inheritance using pea plants.
+</p>
+
+</section><section id="humanimpact">
+    <h2>Human Impact on Environment</h2>
+    <p>Human activities such as pollution, deforestation, and climate change affect ecosystems.</p><!-- ADD IMAGE HERE -->
+<!-- Example: <img src="images/pollution.jpg" alt="Pollution"> -->
+
+<button onclick="showMore('impactMore')">Show More</button>
+<p id="impactMore" style="display:none;">
+    Conservation strategies help protect biodiversity. Sustainable development ensures resources are available for future generations.
+</p>
+
+</section><footer>
+    <p>© 2026 Grade 11 Life Sciences | Created by Lethukuthula</p>
+</footer><script>
+    function showMore(id) {
+        var element = document.getElementById(id);
+        if (element.style.display === "none") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+    }
+</script></body>
+</html>
