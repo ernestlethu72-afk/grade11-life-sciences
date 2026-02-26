@@ -108,63 +108,10 @@ footer {
 <h2>Master Grade 11 Life Sciences</h2>
 <p>CAPS-aligned notes, structured topics, and interactive self-testing.</p>
 </section><section class="topics"><div class="card" id="biodiversity">
-<h2>Biodiversity</h2>
-<p>Genetic, species and ecosystem diversity explained clearly.</p>
-<button onclick="alert('Study classification, five kingdoms, and conservation strategies.')">Explore Topic</button>
-</div><div class="card" id="genetics">
-    <section class="topics">
-        <div class="card" id="microorganisms">
-
-<h2>BIODIVERSITY OF MICROORGANISMS</h2>
-
-<h3>2.1 Introduction</h3>
-<p>
-Some living organisms are so small that they cannot be seen with the naked 
-eye and are known as microorganisms e.g. viruses, bacteria, protists and fungi.
-</p>
-
-<h3>2.1.1 Viruses</h3>
-<ul>
-<li>Viruses are very small, do not consist of cells (are acellular) and have no nucleus, cytoplasm or organelles.</li>
-<li>A virus consists of a central nucleic acid (DNA or RNA – not both) surrounded by a protein capsule.</li>
-<li>Viruses do not perform any metabolic reactions of living organisms.</li>
-<li>They are parasites and can reproduce inside cells of living organisms.</li>
-<li>The shape of viruses varies from rod-shaped, spherical to more complex shapes.</li>
-<li>They are pathogens and cause diseases in plants and animals.</li>
-</ul>
-
-<!-- Add image below inside your images folder -->
-<img src="images/bacteriophage.jpg" alt="Diagram of a bacteriophage" style="width:100%; border-radius:10px; margin-top:10px;">
-
-<p><strong>Figure 1:</strong> Diagram showing a bacteriophage (a virus).</p>
-
-        </div>
-    
-    <div class="card" id="bacteria">
-
-<h2>Bacteria</h2>
-
-<ul>
-<li>Bacteria are small and are classified under the kingdom <strong>Monera</strong>.</li>
-
-<li>They are small, unicellular organisms and are classified as <strong>prokaryotes</strong> (do not contain membrane-bound organelles such as a nucleus, chloroplasts or mitochondria).</li>
-
-<li>The bacterium cell is surrounded by a <strong>cell wall</strong> and a <strong>plasma membrane</strong> that encloses the cytoplasm.</li>
-
-<li>In some bacteria, the cell wall is surrounded by a slime layer or capsule. Genetic material (DNA) is concentrated in a chromatin body known as the <strong>nucleoid</strong>.</li>
-
-<li>Some bacteria move in liquids by means of long thread-like structures called <strong>flagella</strong>.</li>
-
-<li>Most bacteria reproduce asexually through <strong>binary fission</strong> where a single cell divides into two cells.</li>
-
-<li>Bacteria occur in various shapes e.g. rod-shaped (<em>bacillus</em>), spherical (<em>coccus</em>), spiral-shaped (<em>spirillum</em>) and comma-shaped (<em>vibrio</em>).</li>
-
-<li>Some bacteria are autotrophic but the majority are heterotrophic.</li>
-</ul>
-
-<!-- Add your image below -->
-<img src="images/bacterium
-    </section>
+        <h2>Biodiversity</h2>
+        <p>Explore microorganisms including viruses and bacteria.</p>
+        <button onclick="showBiodiversity()">Explore Topic</button>
+    </div><div class="card" id="genetics">
 <h2>Genetics</h2>
 <p>DNA structure, Mendel's laws, inheritance patterns.</p>
 <button onclick="alert('Revise Punnett squares and dominant vs recessive traits.')">Explore Topic</button>
@@ -172,7 +119,31 @@ eye and are known as microorganisms e.g. viruses, bacteria, protists and fungi.
 <h2>Ecology</h2>
 <p>Ecosystems, food chains, trophic levels and energy flow.</p>
 <button onclick="alert('Understand producers, consumers and decomposers.')">Explore Topic</button>
-</div></section><section class="quiz-section" id="quiz">
+</div></section><section id="biodiversityContent" style="display:none; padding:20px; background-color:#1e1e1e; margin:20px; border-radius:8px;">
+    <h2>BIODIVERSITY OF MICROORGANISMS</h2>
+    <h3>2.1 Introduction</h3>
+    <p>
+        Some living organisms are so small that they cannot be seen with the naked eye and are known as microorganisms e.g. viruses, bacteria, protists and fungi.
+    </p><h3>2.1.1 Viruses</h3>
+<p>
+    Viruses are very small, acellular organisms with no nucleus, cytoplasm or organelles.
+    A virus consists of nucleic acid (DNA or RNA – not both) surrounded by a protein capsule.
+    Viruses do not perform metabolic reactions and reproduce only inside living cells.
+    They can be rod-shaped, spherical or complex in shape and are disease-causing pathogens.
+</p>
+
+<h3>Bacteria</h3>
+<p>
+    Bacteria are unicellular prokaryotic organisms classified under Kingdom Monera.
+    They lack membrane-bound organelles. The cell contains a cell wall, plasma membrane,
+    cytoplasm and genetic material concentrated in a nucleoid.
+    Some have a slime capsule and move using flagella.
+    Most reproduce asexually through binary fission.
+    Shapes include bacillus (rod), coccus (spherical), spirillum (spiral) and vibrio (comma-shaped).
+    Some are autotrophic but most are heterotrophic.
+</p>
+
+</section><section class="quiz-section" id="quiz">
 <h2>Test Yourself Quiz</h2>
 <form id="quizForm"><p>1. DNA stands for?</p>
 <input type="radio" name="q1" value="correct"> Deoxyribonucleic Acid<br>
@@ -192,6 +163,12 @@ eye and are known as microorganisms e.g. viruses, bacteria, protists and fungi.
 </section><footer>
 <p>Developed by Lethukuthula Ngwenya | Founder of BlackCrocodile Biology 🐊</p>
 </footer><script>
+function showBiodiversity() {
+    const section = document.getElementById('biodiversityContent');
+    section.style.display = 'block';
+    section.scrollIntoView({ behavior: 'smooth' });
+}
+
 function calculateScore() {
 let score = 0;
 const answers = document.querySelectorAll('input[type="radio"]:checked');
@@ -207,5 +184,4 @@ else message += " - Keep studying!";
 document.getElementById('quizResult').innerText = message;
 }
 </script></body>
-    </html>
-
+                    </html>
